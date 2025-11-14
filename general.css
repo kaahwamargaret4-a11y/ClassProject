@@ -32,9 +32,10 @@ body {
         .profile-section {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 20px;
+            height: 70%;
         }
         .profile-photo-container {
             width: 150px;
@@ -408,4 +409,21 @@ footer {
         padding: 0 20px;
         text-align: left;
     }
+}
+@keyframes slideRightToLeft{
+    0%{
+        trandform: translatex(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.marquee{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: slideRightToLeft 10s linear infinite;
 }
